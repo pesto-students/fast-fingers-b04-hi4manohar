@@ -55,10 +55,10 @@ class App extends React.Component {
 		    		<div>
 			    		<h1>Fast Fingers </h1>
 				    	<p>The Ultimate Typing Game</p>
-				    	<input id='playerName' type="text" placeholder="TYPE YOUR NAME" />
+				    	<input autoComplete="off" id='playerName' type="text" placeholder="TYPE YOUR NAME" />
 
-				    	<div className="levels" id="levels">
-					    	<select name="level">
+				    	<div className="levels">
+					    	<select name="level" id="levels">
 					    		
 					    		<option value="EASY">EASY</option>
 					    		<option value="MEDIUM">MEDIUM</option>
