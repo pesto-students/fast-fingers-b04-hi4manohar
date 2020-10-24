@@ -203,7 +203,7 @@ class Game extends React.Component {
 				})
 			}
 		} else if( this.state.level === 'HARD' ) {
-			if( this.state.[this.state.level] >= 2.5 ) {
+			if( this.state[this.state.level] >= 2.5 ) {
 				this.setState({
 					'gameFinished' : true,
 					'wordTimerValue' : 0,
