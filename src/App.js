@@ -52,7 +52,7 @@ class App extends React.Component {
 		return (
 		    <div className="App">
 		    	{this.state.authScreen === true ? (
-		    		<div>
+		    		<div className="authScreen">
 			    		<h1>Fast Fingers </h1>
 				    	<p>The Ultimate Typing Game</p>
 				    	<input autoComplete="off" id='playerName' type="text" placeholder="TYPE YOUR NAME" />

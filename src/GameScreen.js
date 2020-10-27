@@ -283,7 +283,6 @@ class Game extends React.Component {
 	render() {
 		return(
 			<div className="gamescreen">
-				<h1>Hello</h1>
 
 				<div className="playerInfo">
 					<h2>Name: {sessionStorage.playerName}</h2>
@@ -292,12 +291,19 @@ class Game extends React.Component {
 
 				<div className="scoreBoard">
 
-					<ul className="gamescores">
+					<h4>Score Board</h4>
+
+					<table className="gamescores">
+						<th>Game No.</th>
+						<th>Score</th>
 						{this.state.allGames.map( (games, index) => (
 
-							<li key={index}>{games.name} : {games.score}</li>
+							<tr key={index}>
+								<td>{games.name}</td>
+								<td>{games.score}</td>
+							</tr>
 						))}
-					</ul>
+					</table>
 				</div>
 
 				{this.state.gameFinished === true ? (

@@ -40,3 +40,61 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  /*background-image: url("/img/Group 243.png");*/
+  object-fit: contain;
+}
+
+.authScreen input {
+  width: 165px;
+    height: 34px;
+}
+
+.authScreen select {
+  width: 171px;
+    padding: 11px;
+    margin-top: 20px;
+}
+
+.authScreen button {
+  width: 171px;
+    margin-top: 28px;
+    color: green;
+    background: black;
+    padding: 12px;
+}
+
+.gamescreen input {
+  width: 165px;
+    height: 34px;
+}
+
+.gamescreen button {
+  width: 171px;
+    margin-top: 10px;
+    color: green;
+    background: black;
+    padding: 12px;
+}
+
+.gameScreen {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.gamescores {
+  margin: 0 auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
