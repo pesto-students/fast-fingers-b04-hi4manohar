@@ -58,7 +58,7 @@ class App extends React.Component {
 				    	<input autoComplete="off" id='playerName' type="text" placeholder="TYPE YOUR NAME" />
 
 				    	<div className="levels">
-					    	<select name="level" id="levels">
+					    	<select data-testid="levels" name="level" id="levels">
 					    		
 					    		<option value="EASY">EASY</option>
 					    		<option value="MEDIUM">MEDIUM</option>
@@ -70,6 +70,8 @@ class App extends React.Component {
 					    <div>
 					    	<button onClick={() => this.startGame()}>START GAME</button>
 					    </div>
+
+					    <a href="http://google.com">learn react</a>
 					</div>
 		    	) : <Game 
 		    			level={this.state.level}

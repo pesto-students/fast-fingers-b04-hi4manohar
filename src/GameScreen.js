@@ -47,9 +47,8 @@ class Game extends React.Component {
 
 		let ref = this;
 		await ref.wordList();
-
+		ref.insertGame();
 		setTimeout(function() {			
-			ref.insertGame();
 			ref.displayWord();
 		}, 2000);
 
@@ -294,8 +293,13 @@ class Game extends React.Component {
 					<h4>Score Board</h4>
 
 					<table className="gamescores">
-						<th>Game No.</th>
-						<th>Score</th>
+						<thead>
+							<tr>
+								<th>Game No.</th>
+								<th>Score</th>
+							</tr>
+						</thead>
+						<tbody>
 						{this.state.allGames.map( (games, index) => (
 
 							<tr key={index}>
@@ -303,6 +307,7 @@ class Game extends React.Component {
 								<td>{games.score}</td>
 							</tr>
 						))}
+						</tbody>
 					</table>
 				</div>
 
