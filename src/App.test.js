@@ -9,36 +9,24 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test('After submit game should start, Name and Level Should Match', async () => {
+  const { getByText, getByRole } = render(<App />);
 
-test('renders App component', () => {
-  render(<App />);
-  // screen.debug();
-});
-
-test('After submit game should start', async () => {
-  render(<App />);
   fireEvent.change(screen.getByRole('textbox'), {
   	target: { value: 'Sohan' },
+  });
+
+  fireEvent.change(screen.getByTestId("levels"), {
+    target: { value: "HARD" },
   });
 
   await userEvent.click(screen.getByRole('button'));
 
   expect(screen.getByText(/Name: Sohan/)).toBeInTheDocument();
+  expect(screen.getByText(/Level: HARD/)).toBeInTheDocument();
 });
 
-// test('Level Selection should be correct', async () => {
-
-// 	render(<App />);
-
-// 	fireEvent.change(screen.getByRole('textbox'), {
-// 		target: { value: 'Sohan' },
-//   });
-
-//   fireEvent.change(screen.getByTestId("levels"), {
-//   	target: { value: "HARD" },
-//   });
-
-//   await userEvent.click(screen.getByRole('button'));
-
-//   expect(screen.getByText(/Level: HARD/)).toBeInTheDocument();
-// })
+test('Session should be active for the game', () => {
+  const { getByText } = render(<App />);
+  expect(screen.getByText(/Name: Sohan/)).toBeInTheDocument();
+})

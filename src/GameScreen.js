@@ -5,7 +5,6 @@ class Game extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log(this.props.level);
 		this.intervals = false;
 		this.gameStarted = false;
 		this.progressTimer = false;
@@ -25,7 +24,10 @@ class Game extends React.Component {
 			'gameFinished' : false,
 			'intervals' : false,
 			'timeFinished' : false,
-			'allGames': [],
+			'allGames': [{
+				name: 'Game 1',
+				score: 0
+			}],
 			'gameStopped' : false
 		}
 
@@ -47,7 +49,6 @@ class Game extends React.Component {
 
 		let ref = this;
 		await ref.wordList();
-		ref.insertGame();
 		setTimeout(function() {			
 			ref.displayWord();
 		}, 2000);
